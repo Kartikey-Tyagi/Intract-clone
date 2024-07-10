@@ -54,9 +54,9 @@ const NarrativeCommon = (props) => {
                     <div ref={scrollableDivRef} className="scrollableDiv transition-all rounded-b-sm px-4">
                         {data.questItems.map((item, index) => {
                             return <div key={index} className="scrollableItem px-2 py-2 rounded-xl mb-2">
-                                <div className="flex justify-between">
+                                <div className="flex">
                                     <img src={item.img_url} />
-                                    <div className="itemContent flex items-end">
+                                    <div className="itemContent flex items-end justify-between w-full">
                                         <div className='pl-2'>
                                             <h2 className='mb-5 questTitle'>{item.title}</h2>
                                             <hr className='mb-5 custom_line_break' />
@@ -304,7 +304,7 @@ const Academy = () => {
             </div>
             <div className="relative">
                 <NarrativeCommon data={questData2} classList="sm:mt-20 sm:mr-40" />
-                <img className='-rotate-45 translate-x-32 -mb-40 sm:absolute top-0 left-60 sm:rotate-0' src={path3Img} />
+                <img className='-rotate-45 w-2/5 translate-x-32 -mb-40 sm:absolute top-0 left-60 sm:rotate-0' src={path3Img} />
                 <Milestone data={nftData2} classList="sm:absolute sm:top-2 sm:left-5 sm:z-10" />
             </div>
             <div className='countdownContainer'>
